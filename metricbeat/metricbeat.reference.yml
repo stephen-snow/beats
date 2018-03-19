@@ -317,6 +317,14 @@ metricbeat.modules:
   metricsets:
     - event
 
+#--------------------------------- kvm Module --------------------------------
+- module: kvm
+  metricsets: ["memory"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
+
 #------------------------------ Logstash Module ------------------------------
 - module: logstash
   metricsets: ["node", "node_stats"]
